@@ -1,13 +1,18 @@
 <?php
 
-namespace App\Models;
+    namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
+    use Illuminate\Database\Eloquent\Model;
 
-class Comment extends Model
-{
-    public function post()
+    class Comment extends Model
     {
-        return $this->belongsTo(Post::class);
+        public function post()
+        {
+            return $this->belongsTo(Post::class);
+        }
+        protected $fillable = [
+            'post_id',
+            'commenter_name',
+            'content',
+        ];
     }
-}
