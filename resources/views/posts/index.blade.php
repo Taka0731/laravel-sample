@@ -18,5 +18,5 @@
                 </li>
             @endforeach
         </ul>
-        </html>
-</body>
+    </body>
+    </html>
